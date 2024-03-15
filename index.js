@@ -5,11 +5,11 @@ function encriptar(){
     let muneco = document.getElementById("muneco");
 
     let textoCifrado = texto
-                            .replace(/e/gi, "enter")
-                            .replace(/i/gi, "imes")
-                            .replace(/o/gi, "ober")
-                            .replace(/a/gi, "ai")
-                            .replace(/u/gi, "ufat");
+                            .replace(/enter/gi, "e")
+                            .replace(/\bimes/gi, "i")
+                            .replace(/ober/gi, "o")
+                            .replace(/ai/gi, "a")
+                            .replace(/ufat/gi, "u");
 
     if(texto.length != 0)
     {
