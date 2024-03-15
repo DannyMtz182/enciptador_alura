@@ -5,11 +5,11 @@ function encriptar(){
     let muneco = document.getElementById("muneco");
 
     let textoCifrado = texto
-                            .replace(/enter/gi, "e")
-                            .replace(/\bimes/gi, "i")
-                            .replace(/ober/gi, "o")
-                            .replace(/ai/gi, "a")
-                            .replace(/ufat/gi, "u");
+                            .replace(/e/gi, "enter")
+                            .replace(/i/gi, "imes")
+                            .replace(/o/gi, "ober")
+                            .replace(/a/gi, "ai")
+                            .replace(/u/gi, "ufat");
 
     if(texto.length != 0)
     {
@@ -33,12 +33,12 @@ let tituloMensaje = document.getElementById("titulo-mensaje");
 let parrafo = document.getElementById("parrafo");
 let muneco = document.getElementById("muneco");
 
-let textoCifrado = texto
-                        .replace(/enter/gi, "e")
-                        .replace(/imes/gi, "i")
-                        .replace(/ober/gi, "o")
-                        .replace(/ai/gi, "a")
-                        .replace(/ufat/gi, "u");
+    let textoCifrado = texto
+                            .replace(/enter/gi, "e")
+                            .replace(/\bimes/gi, "i")
+                            .replace(/ober/gi, "o")
+                            .replace(/ai/gi, "a")
+                            .replace(/ufat/gi, "u");
 
     if (texto.length != 0) {
         document.getElementById("texto").value =textoCifrado;
