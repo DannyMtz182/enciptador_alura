@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="encriptar">
+           <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto a encriptar"></textarea>
+        </div>
+
+        <div class="terminos">
+            <p>Solo ingresa letra minusculas y sin simbolos especiales.</p> 
+        </div>
+
+        <div class="botones">
+            <button class="boton-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+            <button class="boton-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+        </div>
+        
+        <div class="encriptado">
+            <img src="muneco.png" alt="muneco alura" id="muneco">
+                <div class="mensaje-encr" id="mensaje-encr">
+                    <h2 id="titulo-mensaje">Ningún texto encontrado para encriptar.</h2>
+                     <p id="parrafo">Ingresa el texto a encriptar o desencriptar</p>
+                </div>
+        </div> 
+        
+    </div>
+
+</body>
+
+<footer>
+    <p3>Realizado por Daniel Martinez</p3>
+</footer>
+
+<script src="IndexChallengeJS.js"></script>
+
+</html>
