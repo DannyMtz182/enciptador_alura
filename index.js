@@ -1,28 +1,38 @@
-function encriptar(){
-    let texto = document.getElementById("texto").value;
+function encriptar() {
+    let textoOriginal = document.getElementById("texto").value;
+    let textoEncriptado = "";
     let tituloMensaje = document.getElementById("titulo-mensaje");
     let parrafo = document.getElementById("parrafo");
     let muneco = document.getElementById("muneco");
 
-    let textoCifrado = texto
-                            .replace(/e/gi, "enter")
-                            .replace(/i/gi, "imes")
-                            .replace(/o/gi, "ober")
-                            .replace(/a/gi, "ai")
-                            .replace(/u/gi, "ufat");
-
-    if(texto.length != 0)
-    {
-        document.getElementById("texto").value = textoCifrado;
-        tituloMensaje.textContent = "Texto encriptado con Éxito";
-        parrafo.textContent = "";
-        muneco.src  = "muneco.png";
+    // Verificar si hay mayúsculas en el texto original
+    if (/[A-Z]/.test(textoOriginal)) {
+        alert("Este encriptador no acepta mayúsculas");
+        return; // Salir de la función si hay mayúsculas
     }
-    else{
+
+    for (let i = 0; i < textoOriginal.length; i++) {
+        let caracter = textoOriginal[i];
+        let encriptado = caracter.toLowerCase()
+            .replace('e', 'enter')
+            .replace('i', 'imes')
+            .replace('o', 'ober')
+            .replace('a', 'ai')
+            .replace('u', 'ufat');
+
+        textoEncriptado += encriptado;
+    }
+
+    if (textoOriginal.length !== 0) {
+        document.getElementById("texto").value = textoEncriptado;
+        tituloMensaje.textContent = "Texto encriptado con éxito";
+        parrafo.textContent = "";
+        muneco.src = "muneco.png";
+    } else {
         muneco.src = "muneco.png";
         tituloMensaje.textContent = "Ningún texto encontrado para encriptar";
         parrafo.textContent = "Ingresa el texto a encriptar o desencriptar";
-        alert ("Debes ingresar un texto");
+        alert("Debes ingresar un texto");
     }
 }
 
