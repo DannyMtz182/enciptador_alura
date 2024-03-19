@@ -11,6 +11,11 @@ function encriptar() {
         return; // Salir de la función si hay mayúsculas
     }
 
+      if (/[^a-zA-Z\s]/.test(textoOriginal)) {
+        alert("Este encriptador no acepta caracteres especiales");
+        return; // Salir de la función si hay caracteres especiales
+    }
+
     for (let i = 0; i < textoOriginal.length; i++) {
         let caracter = textoOriginal[i];
         let encriptado = caracter.toLowerCase()
